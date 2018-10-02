@@ -12,6 +12,7 @@ export class ClientsComponent implements OnInit {
    }
 
   ngOnInit() {
+    console.log("test commit");
   }
 
 }
