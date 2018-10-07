@@ -1,10 +1,22 @@
-<div class="container">
-<h1>Angular 6.0.2</h1>
-  <ul>
-    <li>le premier </li>
-    <li>le deuxieme</li>
-    <li>le troisieme</li>
-  </ul>
- </div>
+
+<div>
+<table>
+<th>Id</th>
+<th>Nom</th>
+<th>Prenom</th>
+<th>Adresse</th>
+<th>Age</th>
+
+<tr *ngFor="let item of listClient">
+  <td>{{item.Id}}</td>
+  <td>{{item.Nom}}</td>
+  <td>{{item.Prenom}}</td>
+  <td>{{item.Adresse}}</td>
+  <td>{{item.Age}}</td>
+</tr>
+</table>
+</div>
+
+
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../shared/services/serviceClient/clientservice';
 
 @Component({
   selector: 'app-clients',
@@ -6,13 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
+  public listClient =  [] ;
   private title:  string;
-  constructor() {
+  constructor(private clients: ClientService) {
     this.title = ' Angular in action fisrt version ';
    }
 
   ngOnInit() {
-    console.log("test commit");
+    console.log('ngOnInit() in ClientsComponent ');
+    console.log( this.clients.getCliens());
+    this.listClient = this.clients.getCliens();
   }
 
 }
